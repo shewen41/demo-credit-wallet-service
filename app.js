@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.json());
 app.use(bodyParser.json());
 
-app.listen(config.port, () => console.log('Server listening on port: '+ config.port));
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => console.log('Server listening on port: '+ {PORT}));
 
 app.use('/api', accountRoutes.routes);
