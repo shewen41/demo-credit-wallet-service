@@ -4,11 +4,11 @@ const config = require('../config');
 const knex = require('knex')({
     client: "mysql2",
     connection: {
-        host : config.mysql.host,
-        port : config.mysql.port,
-        user : config.mysql.user,
-        password : config.mysql.password,
-        database : config.mysql.database
+        host : "us-cdbr-east-06.cleardb.net",
+        //port : "22f4ff20",
+        user : "b954fff20193fe",
+        password : "22f4ff20",
+        database : "heroku_9b05d74d2580fe8"
       },
       pool: { min: 0, max: 7 },
       useNullAsDefault: true

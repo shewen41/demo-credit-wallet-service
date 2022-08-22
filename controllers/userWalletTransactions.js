@@ -49,7 +49,8 @@ const fundAccount = async (req, res, next) => {
         });
 
     } catch (error) {
-        return res.status(500).send(error.message);
+        console.log("Error: "+ error.message);
+        return;
     }
 }
 
@@ -58,6 +59,8 @@ const transferFund = async (req, res, next) => {
         const { amount, account_number, pin } = req.body;
         const destination_account_number = account_number;
         const transactionRef = 'DC-' + Date.now();
+
+        //const trx = await knex.transaction();
 
         const validateDestinationAccount = await knex('user_wallet_accounts').where('account_number', destination_account_number)
             .andWhere('status', 'ACTIVE').first();
@@ -134,7 +137,8 @@ const transferFund = async (req, res, next) => {
         });
 
     } catch (error) {
-        return res.status(500).send(error.message);
+        console.log("Error: "+ error.message);
+        return;
     }
 }
 
@@ -205,7 +209,8 @@ const withdrawFund = async (req, res, next) => {
         });
 
     } catch (error) {
-        return res.status(500).send(error.message);
+        console.log("Error: "+ error.message);
+        return;
     }
 }
 

@@ -50,7 +50,8 @@ const createUserAccounts = async (req, res, next) => {
             message: 'Account created successfully, your acct no. is ' + generatedAccountNumber + '. login to perform transactions'
         });
     }catch (error) {
-        return res.status(500).send(error.message);
+        console.log("Error: "+ error.message);
+        return;
     }
 }
 
@@ -93,7 +94,8 @@ const login = async (req, res, next) => {
         });
     }   
     catch (error) {
-        return res.status(500).send(error.message);
+        console.log("Error: "+ error.message);
+        return;
     }
 }
 

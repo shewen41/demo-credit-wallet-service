@@ -2,6 +2,7 @@ demo-credit-wallet-service-api
 A node js api for a wallet service, accounts for user, transfer funds and withdraw fund.
 
 Steps
+
 Note:
 The api service allows user to /create-account, /login with the created account details, which will return a token which will be use to access the other protected endpoint for the user to make a to another account (/transfer), withdraw from hist wallet (/withdraw) and /fund-account.
 
@@ -21,7 +22,7 @@ a migration with sql to create the neccessary schema and tables is available.
 
 run the migration
 
-create a .env file with the following enviroment variable keys needed to run the app
+(create a .env file with the following enviroment variable keys needed to run the app)
 
 #express server config
 
@@ -36,6 +37,8 @@ MYSQL_PASSWORD=123456
 MYSQL_DATABASE=demo_creditdb
 MYSQL_HOST=localhost
 MYSQL_DB_PORT=3307
+
+(replace the value with your local details)
 
 #jwt secret key
 TOKEN_KEY = SECRET

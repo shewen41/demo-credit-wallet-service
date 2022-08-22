@@ -18,11 +18,7 @@ function authorize(req, res, next) {
                     req.email = data.email;
                 }
             });
-        } else {
-            return res.status(403).send({
-                message: 'Unathourized'
-            });
-        }
+        } 
     } catch (error) {
         return res.status(403).send({
             message: 'missing header'
