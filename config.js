@@ -8,7 +8,7 @@ const {PORT, HOST, HOST_URL, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE,
     MYSQL_DB_PORT, MYSQL_HOST, TOKEN_KEY} = process.env;
 
 assert(PORT, 'PORT is required');
-assert(HOST, 'HOST is required');
+//assert(HOST, 'HOST is required');
 
 module.exports = {
     port: PORT,
