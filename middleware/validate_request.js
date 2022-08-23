@@ -43,7 +43,6 @@ function validateAccountCreate(req, res, next) {
 };
 
 function validateLoginRequest(req, res, next) {
-    console.log("entered-validation");
     const { email, password } = req.body;
 
     if (!email) {
