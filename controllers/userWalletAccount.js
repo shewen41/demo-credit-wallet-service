@@ -7,6 +7,7 @@ const timestamp = new Date();
 
 const createUserAccounts = async (req, res, next) => {
     try {
+        console.log("user");
         const { full_name, email, password, pin } = req.body;
         const generatedAccountNumber = '80'+getRandom(8);
 
@@ -57,6 +58,7 @@ const createUserAccounts = async (req, res, next) => {
 
 const login = async (req, res, next) => {
     try {
+        console.log("entered");
         const { email, password } = req.body;
 
         // check if user exist
