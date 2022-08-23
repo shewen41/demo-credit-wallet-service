@@ -51,3 +51,7 @@ http://localhost:{port specified in .env}/api/fund-account
 http://localhost:{port specified in .env}/api/login
 http://localhost:{port specified in .env}/api/transfer
 http://localhost:{port specified in .env}/api/withdraw
+
+
+
+![alt text](E-R-dbdesigner.jpg)
