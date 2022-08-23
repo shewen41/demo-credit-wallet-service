@@ -1,6 +1,7 @@
 # Dependency directories
 node_modules/
 jspm_packages/
+/build
 
 #dotenv variables file
 .env
