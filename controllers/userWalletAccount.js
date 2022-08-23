@@ -58,7 +58,7 @@ const createUserAccounts = async (req, res, next) => {
 
 const login = async (req, res, next) => {
     try {
-        console.log("entered");
+        console.log("entered" +process.env.TOKEN_KEY);
         const { email, password } = req.body;
 
         // check if user exist
@@ -80,7 +80,7 @@ const login = async (req, res, next) => {
                 const token = jwt.sign({
                     user_id: user.id,
                     email: user.email
-                    }, config.key, {
+                    }, process.env.TOKEN_KEY, {
                     expiresIn: '2h',
                     }
                 );
